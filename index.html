@@ -6,25 +6,24 @@
 
 body {
   margin: 0;
-  font-size: 28px;
+  font-size: 26px;
   font-family: Arial, Helvetica, sans-serif;
-  background: rgb(0,0,0);
-  background: linear-gradient(125deg, rgba(0,0,0,1) 0%, rgba(103,103,103,1) 100%);
-  background-attachment: fixed;
-
+  background-color: black;
 }
 
 .header {
-  background-color: #808080;
+  background-color: ;
   padding: 10px;
   text-align: left;
   z-index: 10;
+  display: block;
 }
 
 #navbar {
   overflow: hidden;
   background-color: white;
   z-index: 10;
+  box-shadow: 0px 0px 5px black;
 }
 
 #navbar a {
@@ -32,7 +31,7 @@ body {
   display: block;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 15px 15px;
   text-decoration: none;
   font-size: 20px;
   z-index: 10;
@@ -48,6 +47,12 @@ body {
   background-color: #04AA6D;
   color: white;
   z-index: 10;
+}
+
+.content {
+  padding-top: auto;
+  height: 100%;
+  display: flex;
 }
 
 .sticky {
@@ -82,15 +87,12 @@ h1 {
   display: inline;
   margin: 13px;
   font-size: 5vw;
-
-
-} 
+}
 
 h2 {
   font-family: helvetica;
   color: springgreen;
-  margin: 50px;
-  text-align: center;
+  margin: auto;
 }
 
 h3 {
@@ -110,7 +112,7 @@ h5 {
   color: black;
   display: inline;
   margin: 50px;
-} 
+}
 
 /* Link Formatting */
 
@@ -132,41 +134,138 @@ a:active {
   color:;
 }
 
+/* DIV Formatting */
+
+div.title_center {
+  text-align: center;
+}
+
+div.content_center {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+div.content_light {
+  width: 100%;
+  height:100%;
+  margin:auto;
+  background: rgb(255,255,255);
+  background: linear-gradient(125deg, rgba(255,255,255,1) 0%, rgba(235,235,235,1) 100%);
+
+}
+div.content_dark {
+  width: 100%;
+  height: 100%;
+  background: rgb(0,0,0);
+  background: linear-gradient(125deg, rgba(0,0,0,1) 0%, rgba(47,47,47,1) 100%);
+}
+
+
 /* Contents Formatting */
 
-.content1 {
-  padding: 16px;
-  background-color:;
-  font-family: helvetica;
-  font-size: 0.875em;
-  color: white;
-  margin: 50px;
-  text-align: justify;
-  text-justify: inter-word;
+strong {
+  word-wrap: break-word;
 }
-.content2 {
-  padding: 16px;
-  background-color:;
+.content_wrap1 {
+  display: flex;
+  width: auto;
+  margin: 50px;
+}
+.content_wrap2 {
+  display: flex;
+  width: auto;
+  margin: 50px;
+}
+.content_wrap3 {
+  display: flex;
+  width: auto;
+  margin: auto;
+}
+.content_wrap4 {
+  display: flex;
+  width: auto;
+  margin: auto;
+}
+.column_left {
+  float: left;
+  flex: 1;
+  width: 45%;
+  padding: auto;
+  display: block;
+  margin: 0 auto;
+}
+.column_right {
+  float: right;
+  width: 45%;
+  padding: auto;
+  display: block;
+  margin: 0 auto;
+}
+.row {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.image_left {
+  float: left;
+  flex: 1;
+  width: 30%;
+  padding: auto;
+  display: block;
+  margin: 0 auto;
+  align-content: right;
+}
+
+.image_right {
+  float: right;
+  width: 30%;
+  padding: auto;
+  align-content: left;
+  display: block;
+  margin: 0 auto;
+}
+
+.text_left {
+  float: left;
+  flex: 1;
+  width: 60%;
+  padding: auto;
+}
+.text_right {
+  float: right;
+  width: 60%;
+  padding: auto;
+}
+p.body {
   font-family: helvetica;
-  font-size: 0.875em;
+  font-size: 0.8em;
   color: white;
   margin: 50px;
   text-align: justify;
   text-justify: inter-word;
 }
 
-p.body {
+p.body_light {
   font-family: helvetica;
-  font-size: 0.875em;
-  color: white;
+  font-size: 0.8em;
+  color: black;
   margin: 50px;
   text-align: justify;
   text-justify: inter-word;
+}
+
+p.body_left {
+  font-family: helvetica;
+  font-size: 0.7em;
+  color: black;
+  margin: 50px;
+  text-align: ;
 }
 
 ul {
   font-family: helvetica;
-  font-size: 0.875em;
+  font-size: 0.8em;
   color: White;
   margin-left: 35px;
   text-align: left;
@@ -177,28 +276,12 @@ img {
   opacity: 0.9;
   overflow: hidden;
   z-index: -10;
-
 }
 
-/* Table Formatting */
-
-table, th, td {
-  border: ;
-  border-collapse: collapse;
-  width: 100%;
-}
-th, td {
-  font-size: 0.875em;
-  padding: 50px;
-  text-align: center;
-  width: 50%;
-  height: auto;
-}
-
-table.center {
-  width: 95vw;
-  height: 90vh;
-  margin: 2%;
+figcaption {
+  font-size: 0.7em;
+  text-align: left;
+  opacity: .5;
 }
 
 </style>
@@ -209,7 +292,7 @@ table.center {
 </head>
 
 <body>
-<a id="0"></a>
+<a id="1"></a>
 <div id="header">
   <h1>COSC1078 /// ASSIGNMENT 1</h1><br>
   <h1>DANIEL NANTHATHAMMIKO /// S3196237</h1><br>
@@ -220,220 +303,532 @@ table.center {
   <a href="#3">IDEAL JOB</a>
   <a href="#4">PROFILE</a>
   <a href="#5">PROJECT IDEAS</a>
-  <a href="#6">REFERENCES</A>
+  <a href="#6">REFERENCES</a>
 </div>
-<a id="1"></a>
-<div class="content1">
-<h2>PERSONAL INFORMATION</h2>
-<img src="media/images/contents/6.jpg">
-<p class="body">
-Thank you for taking the time to review my personal profile. My name is Daniel and I was born and raised in Melbourne.<br><br>
-The Nanthathammiko family moved from Laos due to the Third Indochina War and the communist rule with many family members spreading across the world to countries such as Australia, France and the USA.<br><br>
-My upbringing was an interesting mix of traditional Lao and identifiably suburban Australian.<br>
-I have studied many different topics over the years such as Media and Communication and Spatial Science however I had always been more interested in learning on the job (which hasn’t been helpful in gaining any certification) which has made me a jack of all trades.
-I thoroughly enjoy listening and playing music in which, I have been able to experience being a touring and recording musician in my 20’s.<br><br>
-My work over the past 12 years has been within the Spatial data industry from working on mining projects to developing systems that allow data collection in tough conditions.<br>
-Prior to the current scenario, I've been fortunate enough to travel the world for my current work as it takes me to all sorts of sites.
-</p>
-
+<div class="content">
+  <div class="content_dark">
+    <br>
+    <h1>PERSONAL INFORMATION</h1>
+      <p class="body">
+        Thank you for taking the time to review my personal profile. My name is Daniel and I was born and raised in Melbourne. The Nanthathammiko family moved from Laos due to the Third Indochina War and the communist rule with many family members spreading across the world to countries such as Australia, France and the USA.
+        <br>
+        <br>
+        My upbringing was an interesting mix of traditional Lao and identifiably suburban Australian.
+        <br>
+        I have studied many different topics over the years such as Media and Communication and Spatial Science however I had always been more interested in learning on the job (which hasn’t been helpful in gaining any certification) which has made me a jack of all trades.
+      </p>
+        <figure>
+          <img style="box-shadow: 5px 5px 10px black;" src="media/images/contents/profile_music.jpg">
+          <figcaption style="color:white;">Band Practice - Image taken by Daniel Nanthathammiko</figcaption>
+        </figure>
+      <p class="body">I thoroughly enjoy listening and playing music in which, I have been able to experience being a touring and recording musician in my 20’s.<br><br>
+        My work over the past 12 years has been within the Spatial data industry from working on mining projects to developing systems that allow data collection in tough conditions.<br>
+        Prior to the current scenario, I've been fortunate enough to travel the world for my current work as it takes me to all sorts of sites.
+      </p>
+  </div>
 </div>
-<a id="2"></a>
-<div class="content2">
-<h2>INTEREST IN IT</h2>
-<img src="media/images/contents/5.jpg">
-<p class="body">
-IT has always played an important part in my life on a personal and professional level. My interest in IT in a general sense began when I was in my early teens. My dad had just purchased a 486 CPU PC with a CD Rom and a 3.5” Floppy Disk. We only had a few games on floppy such as Indiana Jones and the last crusade and Wolfenstein (thanks to one of my uncles!) but had a CD Rom of the encyclopaedia Britannica which was super helpful throughout school.<br>
-<br>
-When we upgraded from Windows 3.1 to Windows 95 on our next machine (IBM with a Pentium CPU), I was responsible for setting it up and getting it up and running. The time spent setting it up allowed me to lurk around the W95 install disk. To my surprise it had some easter eggs on there such as Pinball, Hover (the maze game) and a life changing video clip, Weezer’s Buddy Holly (shaped my musical tastes from a very young age!).<br>
-<br>
-From there, my interest in IT and tech in general spiralled out of control and now I’m the go to guy to make things work, to understand systems at work and explain to the people I deal with how to utilise our systems in very complex and stressful settings.<br>
-<br>
-I chose RMIT as I have previously studied here over a decade ago and it was a good environment for technically inclined studies.<br>
-I hope to gain a more updated and relevant understanding of the IT industry on a professional level as I have been sheltered from what other companies might be doing in this space and where I could be more efficient in my planning and execution of projects requiring IT consideration.<br>
-</p>
+    <a id="2"></a>
+    <div class="content_light">
+      <br>
+      <br>
+      <h1>INTEREST IN IT</h1>
+      <p class="body_light">
+        IT has always played an important part in my life on a personal and professional level. My interest in IT in a general sense began when I was in my early teens. My dad had just purchased a 486 CPU PC with a CD Rom and a 3.5” Floppy Disk. We only had a few games on floppy such as Indiana Jones and the last crusade and Wolfenstein (thanks to one of my uncles!) but had a CD Rom of the encyclopaedia Britannica which was super helpful throughout school.<br>
+        <br>
+        When we upgraded from Windows 3.1 to Windows 95 on our next machine (IBM with a Pentium CPU), I was responsible for setting it up and getting it up and running. The time spent setting it up allowed me to lurk around the W95 install disk. To my surprise it had some easter eggs on there such as Pinball, Hover (the maze game) and a life changing video clip, Weezer’s Buddy Holly (shaped my musical tastes from a very young age!).
+      </p>
+      <figure>
+        <img style="box-shadow: 5px 5px 10px black;" src="media/images/contents/job_laptop.jpg">
+        <figcaption>CAD on my laptop - Photo taken by Daniel Nanthathammiko</figcaption>
+      </figure>
+      <p class="body_light">
+        From there, my interest in IT and tech in general spiralled out of control and now I’m the go to guy to make things work, to understand systems at work and explain to the people I deal with how to utilise our systems in very complex and stressful settings.
+        <br>
+        <br>
+        I chose RMIT as I have previously studied here over a decade ago and it was a good environment for technically inclined studies.
+        <br>
+        I hope to gain a more updated and relevant understanding of the IT industry on a professional level as I have been sheltered from what other companies might be doing in this space and where I could be more efficient in my planning and execution of projects requiring IT consideration.
+      </p>
 
-</div>
-<a id="3"></a>
-<div class="content1">
-<h2>IDEAL JOB</h2>
-<img src="media/images/contents/2.jpg">
-<h3>Enterprise Solutions Architect</h3>
-<p class="body">
-<a href="https://www.seek.com.au/job/53349064?type=standard#searchRequestToken=a01a7138-eb6d-4459-8465-18f1cadfbb63" target="_blank">https://www.seek.com.au/job/53349064?type=standard#searchRequestToken=a01a7138-eb6d-4459-8465-18f1cadfbb63</a><br>
-<br>
-This role (and the role of a Solutions Architect in general) is one that will connect the commercial requirements of the business and bring it to life on a technical level, ensuring that the business can execute their business initiatives and remain focused on the core strategy or vision.<br>
-This position (and occupation in general) is very appealing to me as I already have the skill set to understand customers’ requirements and can align their requirements to a solution.<br>
-My experience also extends to implementing technical solutions on their sites, training end users and following through with regular checks to ensure systems are working as they should.<br>
-This experience on the customer engagement side with onboarding very niche hardware is a good starting point for me.<br>
-Defining the occupation, I’m interested in working towards is helping my development to become a true all-rounder as it is plain to see an Enterprise Architect must possess a deep understanding of the technology that exists now, and which solutions would truly meet the customers’ demands.<br><br>
-To summarise the required skills required based on current advertisements, it is expected that a suitable candidate would have:
-<ul>
-  <li>Enterprise domain expertise</li>
-  <li>Deep understanding of frameworks, current industry standards and trends, database knowledge</li>
-  <li>Cloud platforms and API integration</li>
-  <li>Security, authorisation management</li>
-  <li>IT Degree or similar</li>
-  <li>5+ years’ experience in relevant platforms to the employer</li>
-  <li>General programming capabilities</li>
-  <li>Experience and demonstrable AGILE practices</li>
-</ul><br>
-</p>
-<strong style="color:gray; margin: 50px;">Where do I slot in regarding the expected minimum requirements?</strong>
-<p class="body">
-Enterprise domain expertise – I have a lightly touched on enterprise domain systems for many of my customers.<br>
-Most of my experience is identifying conflicts and issues with our software and ensuring it is performing on the clients’ systems without issue.<br>
-This does require lots of back and forth with varying IT departments and a general understanding of an end users’ permissions.
-I have setup a Microsoft 365 Business Premium account at work to begin my own understanding of Microsoft’s Enterprise/Business suite of products which includes Microsoft Azure.<br>
-I’m constantly trying to figure out ways to streamline our efforts for better productivity as this is fundamental for any business.</p>
-<strong style="color:gray; margin: 50px;">Deep understanding of frameworks, current industry standards and trends, database knowledge</strong>
-<p class="body">
-I have a broad understanding of current IT systems trends however as I don’t have in-depth experience outside of my work experience or insight to a client’s full enterprise setup, my knowledge is very basic.<br>
-I will be ensuring that at every opportunity, I will have more in-depth discussions with my clients IT departments to round out my understanding.</p>
-<strong style="color:gray; margin: 50px;">Cloud platforms and API integration, Security, authorisation management</strong>
-<p class="body">
-As above, I will be working more in-depth with cloud-based platforms to understand the purpose and function. This should inform me on how best to utilise these tools to achieve positive business goals.<br>
-On the API integration and Security side, I plan to develop basic Web Apps that will require data to be pushed/pulled (low risk, openly available data to do simple things) and then further develop aspects such as logins to “personalise” aspects of information.</p>
-<strong style="color:gray; margin: 50px;">IT Degree, experience, and programming</strong>
-<p class="body">
-This current course will begin to fill out my requirement of tertiary education. I am fortunate to already be employed fulltime by a large software/hardware development company (6 years already!) and counting.<br>
-My role is in a commercial capacity right now with a requirement for technical experience and skills however my goal will be to extend this into the software and systems development side over time to provide me with real experience.</p>
+    </div>
+    <a id="3"></a>
+    <div class="content_dark">
+      <br>
+      <br>
+      <h1>IDEAL JOB</h1>
+        <a href="https://www.seek.com.au/job/53349064?type=standard#searchRequestToken=a01a7138-eb6d-4459-8465-18f1cadfbb63" target="_blank">
+        <figure>
+          <img style="box-shadow: 5px 5px 10px black;" src="media/images/contents/job_ad.jpg">
+          <figcaption style="color:white;">Job advertisement - Screenshot by Daniel Nanthathammiko</figcaption>
+        </figure>
+        </a>
+        <p class="body">
+        This role (and the role of a Solutions Architect in general) is one that will connect the commercial requirements of the business and bring it to life on a technical level, ensuring that the business can execute their business initiatives and remain focused on the core strategy or vision.
+        This position (and occupation in general) is very appealing to me as I already have the skill set to understand customers’ requirements and can align their requirements to a solution.
+        <br><br>
+        My experience also extends to implementing technical solutions on their sites, training end users and following through with regular checks to ensure systems are working as they should.
+      </p>
+        <figure style="color:white;">
+          <img style="box-shadow: 5px 5px 10px black;" src="media/images/contents/job_handshake.jpg">
+          <figcaption>Sales meeting, China - Photo supplied by Daniel Nanthathammiko</figcaption>
+        </figure>
+      <p class="body">
+        This experience on the customer engagement side with onboarding very niche hardware is a good starting point for me.<br>
+        Defining the occupation, I’m interested in working towards is helping my development to become a true all-rounder as it is plain to see an Enterprise Architect must possess a deep understanding of the technology that exists now, and which solutions would truly meet the customers’ demands.
+      </p>
+      <p class="body">
+        To summarise the required skills required based on current advertisements, it is expected that a suitable candidate would have:
+      </p>
+      <div class="content_center">
+        <h3>
+        <ul>
+          <li>Enterprise domain expertise</li>
+          <li>Deep understanding of frameworks, current industry standards and trends, database knowledge</li>
+          <li>Cloud platforms and API integration</li>
+          <li>Security, authorisation management</li>
+          <li>IT Degree or similar</li>
+          <li>5+ years’ experience in relevant platforms to the employer</li>
+          <li>General programming capabilities</li>
+          <li>Experience and demonstrable AGILE practices</li>
+        </ul>
+      </h3>
+      </div>
+      <div class="content_wrap1">
+        <div class="row">
+          <div class="column_left">
+            <h2 style="color:; margin: 50px;">EXPECTED REQUIREMENTS?</h2>
+            <p class="body">
+              Enterprise domain expertise – I have lightly touched on enterprise domain systems for many of my customers.
+              <br>
+              <br>
+              Most of my experience is identifying conflicts and issues with our software and ensuring it is performing on the clients’ systems without issue.
+              <br>
+              <br>
+              This does require lots of back and forth with varying IT departments and a general understanding of an end users’ permissions.
+              <br>
+              <br>
+              I have setup a Microsoft 365 Business Premium account at work to begin my own understanding of Microsoft’s Enterprise/Business suite of products which includes Microsoft Azure.<br>
+              <br>
+              <br>
+              I’m constantly trying to figure out ways to streamline our efforts for better productivity as this is fundamental for any business.
+            </p>
+          </div>
+          <div class="column_right">
+            <h2 style="color:; margin: 50px;">FRAMEWORKS & INDUSTRY STANDARDS</h2>
+            <p class="body">
+              I have a broad understanding of current IT systems trends however as I don’t have in-depth experience outside of my work experience or insight to a client’s full enterprise setup, my knowledge is very basic.
+              <br>
+              <br>
+              I will be ensuring that at every opportunity, I will have more in-depth discussions with my clients IT departments to round out my understanding.
+              <div class="title_center">
+              <img style="width:50%; height: auto;" src="media/images/contents/project_apps.png">
+            </div>
+            </p>
 
-</div>
-<a id="4"></a>
-<div class="content2">
-<h2>PROFILE</h2>
-<table class="center">
-  <tr>
-    <th colspan="2"><h1>MYERS-BRIGGS TESTS</h1></th>
-    <th></th>
-  </tr>
-  <tr> 
-    <th><img src="media/images/personality/briggs_.jpg" style="width:70vw"></th>
-    <th>
-     <p class="body">
-A Debater (ENTP) is a person with the Extraverted, Intuitive, Thinking, and Prospecting personality traits. They tend to be bold and creative, deconstructing and rebuilding ideas with great mental agility. They pursue their goals vigorously despite any resistance they might encounter.
-     </p>
-    </th>
-  </tr>
+          </div>
+        </div>
+      </div>
+      <div class="content_wrap2">
+        <div class="row">
+          <div class="column_left">
+            <h2 style="color:; margin: 50px;">CLOUD, APIs, SECURITY</h2>
+            <p class="body">
+              As above, I will be working more in-depth with cloud-based platforms to understand the purpose and function. This should inform me on how best to utilise these tools to achieve positive business goals.
+              <br>
+              <br>
+              On the API integration and Security side, I plan to develop basic Web Apps that will require data to be pushed/pulled (low risk, openly available data to do simple things) and then further develop aspects such as logins to “personalise” aspects of information.</p>
+            </p>
+          </div>
+          <div class="column_right">
+            <h2 style="color:; margin: 50px;">DEGREE & EXPERIENCE</h2>
+            <p class="body">
+              This current course will begin to fill out my requirement of tertiary education. I am fortunate to already be employed fulltime by a large software/hardware development company (6 years already!) and counting.
+              <br>
+              <br>
+              My role is in a commercial capacity right now with a requirement for technical experience and skills however my goal will be to extend this into the software and systems development side over time to provide me with real experience.
+            </p>
+          </div>
+        </div>
+      </div>
+      <a id="4"></a>
+    <div class="content_light">
+      <br>
+      <br>
+      <h1>PROFILE</h1>
+      <br><br>
+      <div class="title_center"><h1 style="color:darkslategrey;">MYERS-BRIGGS TESTS</h1></div>
+      <br>
+      <div class="content_wrap3">
+        <div class="row">
+          <div class="column_left">
+          <figure>
+            <img style="box-shadow: 5px 5px 10px black;" src="media/images/personality/briggs_.jpg" style="width:70vw">
+            <figcaption style="color:;">Myers-Briggs Test Result - Screenshot by Daniel Nanthathammiko</figcaption>
+          </figure>
+          </div>
+          <div class="column_right">
+            <p class="body_light">
+              A Debater (ENTP) is a person with the Extraverted, Intuitive, Thinking, and Prospecting personality traits.
+              <br>
+              <br>
+              They tend to be bold and creative, deconstructing and rebuilding ideas with great mental agility.
+              <br>
+              <br>
+              They pursue their goals vigorously despite any resistance they might encounter.
+            </p>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="title_center"><h1 style="color:darkslategrey;">LEARNING STYLE TEST</h1></div>
+      <br>
+      <div class="content_wrap3">
+        <div class="row">
+          <div class="column_left">
+            <p class="body_light">
+              You're a visual learner! You prefer to use pictures, images and spatial understanding to learn new material.
+              <br>
+              Visual learners should:
+              <ul style="color: black;">
+                <li>Take notes during class as writing things down helps you remember information</li>
+                <li>Use flow charts, mind maps and diagrams for note taking</li>
+                <li>Visualise ideas or facts as a picture before writing them down</li>
+                <li>Replace words with images, pictures, colour and other visual media</li>
+                <li>Use visual media such as colour and images to help you learn</li>
+                <li>Read material before you learn it</li>
+              </ul>
+            </p>
+          </div>
+          <div class="column_right">
+          <figure>
+            <img style="box-shadow: 5px 5px 10px black;" src="media/images/personality/learning_.jpg" style="width: 70vw">
+            <figcaption style="color:;">Learning Style Test Results - Screenshot by Daniel Nanthathammiko</figcaption>
+          </figure>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="title_center"><h1 style="color:darkslategrey;">SPEED TYPING TEST</h1></div>
+      <br>
+      <div class="content_wrap3">
+        <div class="row">
+          <div class="column_left">
+          <figure>
+            <img style="box-shadow: 5px 5px 10px black;" src="media/images/personality/typing_.jpg" style="width: 70vw">
+            <figcaption style="color:;">Speed Typing Test Results - Screenshot by Daniel Nanthathammiko</figcaption>
+          </figure>
+          </div>
+          <div class="column_right">
+            <p class="body_light">
+              These results suggest that I am somewhat of an average touch typer.
+              <br>
+              <br>
+              I have a high degree of accuracy in my touch typing.
+              <br>
+              <br>
+              I used this as a test for potential employers as this should directly relate to efficiency and accuracy in implementing code, scripting and so on.
+            </p>
+          </div>
+        </div>
+      </div>
+        <h2 style="color:gray; margin: 50px;">What do the results of these tests mean for you?</h2>
+        <p class="body_light">
+          Looking at the results from the Myers-Briggs test, learning style test and a Speed Typing Test, I was labelled a Debater that required a visual learning style with an average typing speed and a relatively good accuracy in typing.
+          <br><br>
+          I agree that I have a debating type personality. It has served me well to progress through much stagnation in the workplace and has helped me to overcome obstacles in commercial activity and in my personal life.
+          <br><br>
+          However, there is detriment to having a debating personality and it is one that I already recognise and have been actively working to ensure I am indeed a team player and move in the direction of a team (if they’re moving in the right direction).
+          <br><br>
+          The learning style test also confirmed that I prefer visual learning styles. This doesn’t necessarily mean in an educational setting as I find myself writing and drawing in meetings and discussions with clients to better grasp their requirements at a later time.
+          <br><br>
+          The Speed Typing test was one that was merely to show that I could push out text, html, css, python scripts in a very quick time frame due to my comfort levels in touch typing.
+        </p>
+        <h2 style="color:gray; margin: 50px;">How do you think these results may influence your behaviour in a team?</h2>
+        <p class="body_light">
+          I do not believe that there is any real negative impact from my current behaviour in a team setting. I’m a very collaborative person and generally enjoy mixing thoughts and ideas with others to come up with the best solution together.
+          <br>
+          There are times when I will take a leadership role when I know I can chorale everyone and move a team forward to deliver a solution but there are also times when I can be the team player because the most important task is to deliver a positive result.
+        </p>
+        <figure>
+          <img style="box-shadow: 5px 5px 10px black;" src="media/images/contents/job_group.jpg">
+          <figcaption style="color:;">Sales meeting, USA - Supplied by Daniel Nanthathammiko</figcaption>
+        </figure>
+        <h2 style="color:gray; margin: 50px;">How should you take this into account when forming a team?</h2>
+        <p class="body_light">
+          Sometimes we don’t get a choice in how a team is formed and what personality/ideological conflicts will arise because of this. I will always maintain in the forefront of my mind that professionalism and deliver of result is number one.
+          <br>
+          My goal will always be to push everyone to offer their best in a group setting regardless of the role I will play.
+        </p>
+      </div>
+      <a id="5"></a>
+      <div class="content_dark">
+        <br>
+        <br>
+        <h1>PROJECT IDEA</h1>
+        <br>
+        <br>
+        <div class="title_center">
+          <br>
+          <i>
+            <h1 style="color:white;">"A Web App to analyse spatial data regardless of file type or source and create a deliverable"</h1>
+          </i>
+          <br>
+        </div>
+        <br>
+        <br>
+        <div class="title_center">
+          <h1>PARSE THE PARCEL</h1>
+        </div>
+          <p class="body">
+            Mobile Parse the Parcel is a Web App that will convert any spatial data with any extension into a deliverable needed for a low fee per conversion.
+            The consumer base this product will target are those that are not “experts” in spatial data but occasionally need to handle and utilise this data.
+          </p>
+          <div class="content_wrap4">
+            <div class="row">
+              <div class="image_left">
+                <figure>
+                  <img src="media/images/contents/project_phone.png">
+                  <figcaption style="color:white;">Parse the Parcel App - Image created by Daniel Nanthathammiko</figcaption>
+                </figure>
+              </div>
+              <div class="text_right">
+                <p class="body">
+                  Parse the Parcel will allow these industries to work quickly without having knowledge on how to handle data.
+                  Industry standard deliverables would be available to select from such as PDF, 3D PDF, DWG/DXF, LAS/LAZ, PLY, OBJ, CSV, TXT, PTS etc.
+                  <br>
+                  <br>
+                  An example of this would be real estate agents collecting 3D coloured point cloud data from their LiDAR enable phones and wanting to create 3D visuals and floor plans without a fuss.
+                  <br>
+                  <br>
+                  They would simply log in to our Web App after creating an account, upload the data and receive an email with a link to the deliverable.
+                  <br>
+                  <br>
+                  A deliverable in this case could be a 2D Plan view PDF with dimensions and 3D perspective views of the home they would like to sell with volumes etc.
+                  <br>
+                  <br>
+                  Another example would be construction site workers needing floor levels on a slab.
+                  They might receive an email with a DWG file with no way to view and print it to a plan as it is a last-minute amendment.
+                  <br>
+                  <br>
+                  Using our service, they could upload the DWG and receive a 2D plan view with RL’s and grades on the slab based on the DWG file.
 
-  </tr>
-  <tr>
-    <th colspan="2"><h1>LEARNING STYLE TEST</h1></th>
-    <th></th>
-  </tr>
-  <tr>
-    <th>
-     <p class="body">
-You're a visual learner! You prefer to use pictures, images and spatial understanding to learn new material.
-<br>
-Visual learners should: 
-<ul>
-  <li>Take notes during class as writing things down helps you remember information</li>
-  <li>Use flow charts, mind maps and diagrams for note taking</li>
-  <li>Visualise ideas or facts as a picture before writing them down</li>
-  <li>Replace words with images, pictures, colour and other visual media</li>
-  <li>Use visual media such as colour and images to help you learn</li>
-  <li>Read material before you learn it</li>
-</ul>
-</p>
-</th>
-    <th><img src="media/images/personality/learning_.jpg" style="width: 70vw"></th>
-  </tr>
-  <tr>
-    <th colspan="2"><h1>SPEED TYPING TEST</h1></th>
-    <th></th>
-  </tr>
-  <tr>
-    <th><img src="media/images/personality/typing_.jpg" style="width: 70vw"></th>
-    <th>
-<p class="body">
-These results suggest that I am somewhat of an average touch typer. I have a high degree of accuracy in my touch typing.
-I used this as a test for potential employers as this should directly relate to efficiency and accuracy in implementing code, scripting and so on.
-</p>
-    </th>
-  </tr>
-</table>
-
-<strong style="color:gray; margin: 50px;">What do the results of these tests mean for you?</strong>
-<p class="body">Looking at the results from the Myers-Briggs test, learning style test and a Speed Typing Test, I was labelled a Debater that required a visual learning style with an average typing speed and a relatively good accuracy in typing.<br><br>
-I agree that I have a debating type personality. It has served me well to progress through much stagnation in the workplace and has helped me to overcome obstacles in commercial activity and in my personal life.<br><br>
-However, there is detriment to having a debating personality and it is one that I already recognise and have been actively working to ensure I am indeed a team player and move in the direction of a team (if they’re moving in the right direction).<br><br>
-The learning style test also confirmed that I prefer visual learning styles. This doesn’t necessarily mean in an educational setting as I find myself writing and drawing in meetings and discussions with clients to better grasp their requirements at a later time.<br><br>
-The Speed Typing test was one that was merely to show that I could push out text, html, css, python scripts in a very quick time frame due to my comfort levels in touch typing.</p>
-<strong style="color:gray; margin: 50px;">How do you think these results may influence your behaviour in a team?</strong><p class="body">
-I do not believe that there is any real negative impact from my current behaviour in a team setting. I’m a very collaborative person and generally enjoy mixing thoughts and ideas with others to come up with the best solution together.<br>
-There are times when I will take a leadership role when I know I can chorale everyone and move a team forward to deliver a solution but there are also times when I can be the team player because the most important task is to deliver a positive result.</p>
-<strong style="color:gray; margin: 50px;">How should you take this into account when forming a team?</strong>
-<p class="body">
-Sometimes we don’t get a choice in how a team is formed and what personality/ideological conflicts will arise because of this. I will always maintain in the forefront of my mind that professionalism and deliver of result is number one.<br>
-My goal will always be to push everyone to offer their best in a group setting regardless of the role I will play.
-</p>
-
-</div>
-<a id="5"></a>
-<div class="content1">
-<h2>PROJECT IDEA</h2>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="title_center">
+            <h1>MOTIVATION</h1>
+          </div>
+          <p class="body">
+            Mobile Parse the Parcel is an idea I have often wished existed and was easily accessible at a low cost.
+            My in-depth years and experience in the spatial data collection industry has informed my decision to push this idea forward as there is nothing in the space that would be system/device agnostic (majority of CAD packages install on Windows only for example) and would be simple enough for the layman to receive data they want and need.
+            Most of the time, people don’t really know what deliverables they need and so rely heavily on data professionals to hold their hand (whilst charging them an arm and a leg).
+            <br>
+            <br>
+            This wouldn’t be a replacement to existing CAD packages as the suer won’t have the ability to truly modify data however, we will give the user the ability to view their raw data upload in something similar to the Potree Viewer https://github.com/potree/potree to ensure the data is acceptable.
+            Another reason this Web App should be created is because traditional CAD packages are super expensive, limited to computers and having a steep learning curve to extract suitable deliverables.
+            A quick search shows that AutoCAD have a web-based app however upon investigation, it is still very much a complex CAD setup and not really focused on the non-expert market.
+            Fundamentally, Parse the Parcels mission as a Web App will focus on simplicity of usage and cost effectiveness for the customer.
+          </p>
 
 
-</div>
+          <div class="title_center">
+            <h1>DESCRIPTION</h1>
+          </div>
+          <div class="content_wrap4">
+            <div class="row">
+              <div class="text_left">
+                <p class="body">
+                  Mobile Parse the Parcel will enable a seamless digital workflow for those not equipped to handle 3D spatial data by providing them a way to utilise and convert data formats without requiring the software, enable usage on effectively all devices.
+                  <br>
+                  <br>
+                  Users would need to sign up for a free account via our Web-App UI to start converting files.
+                  <br>
+                  <br>
+                  Once logged in, they can setup their customer profile including their company address, details such as phone number/email and company logo.
+                  This would be used for PDF’s being generated on our platform to give customers a professional output.
+                  <br>
+                  <br>
+                  A user can create “Projects” to upload data to and download data from.
+                  Each project is sharable via a link that the account owner can generate and send.
+                  This link would remain active for 7 days or if the project is live and still required.
+                  <br>
+                  <br>
+                  The Web-App itself would not allow for any in-depth processing of the data; it will only represent the data “as is”.
+                  There would be scope for “filtering” based on pre-defined settings if the data set is a point cloud (from a mobile phone for example) to minimise support requirements.
+                  As this is a tool for a non-expert, it is wise to disable any in-depth editing.
+                  <br>
+                  <br>
+                  Most users would be uploading file types such as DWG/DXF, ASCII CSV/TXT, LAS/LAZ, PLY and so our imports will initially cater to the required data formats but would allow a custom import for those a little more advance (an option that would allow a user to set headers for the data for example).
+                  On the deliverable side, users can export industry standard files formats.
+                </p>
+              </div>
+              <div class="image_right">
+                <br>
+                <br>
+                <figure>
+                  <img src="media/images/contents/project_phone_plan.png">
+                  <figcaption style="color:white;">Parse the Parcel App Plan View - Image created by Daniel Nanthathammiko</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="title_center">
+            <h1>BUSINESS MODEL</h1>
+          </div>
+          <div class="content_wrap4">
+            <div class="image_left">
+              <br>
+              <br>
+            <figure>
+              <img src="media/images/contents/project_stripe.png">
+              <figcaption style="color:white;">Stripe Payments Site - Screenshot by Daniel Nanthathammiko</figcaption>
+            </figure>
+
+            </div>
+            <div class="text_right">
+              <p class="body">
+                Commercially, the user would receive x number of free uploads and/or will have y amount of cloud storage before they are forced to pay for conversions/deliverables.
+                This will be dependent on my costs.
+                The fee itself would be low such as $5 for a PDF floor plan and 3D PDF for dynamic 3D visuals of the draped PLY files.
+                <br>
+                <br>
+                The user would not need to pay for a continuous subscription (unless they opt to for volume discounts) but would pay as you go
+                This gives the users a feeling of freedom which is useful when other similar apps require yearly billing.
+                <br>
+                <br>
+                A subscription model would be available but not the standard as not all users will want to generate a volume of deliverables per month.
+                If a user wants to handle large datasets (100mb plus), we will have a message that states that the data is large and may take a long time to process unless they pay for extra computing power.
+              </p>
+            </div>
+          </div>
+          <p class="body">
+            This would also trigger a greater download fee as the backend will need to provide more computing power to convert these datasets.
+            <br>
+            The Web-App would guide the user through the process unless this feature is turned off in “Account Settings”.
+            Within the settings section, default options/parameters could also be set, for example: setting uploads to PLY and DWG only and deliverables to 3D PDF and PDF 2D plans area values.
+            <br>
+            <br>
+            This would streamline a user’s interaction with the Web-App, limiting wasted time and automating the process of data conversion as they will then just download the deliverable right after uploading.
+            A feedback form would be available for requests and upgrades.
+
+          <div class="title_center">
+            <h1>TOOLS & TECHNOLOGY</h1>
+          </div>
+          <div class="content_wrap4">
+            <div class="column_left">
+              <p class="body">
+                On the customer side to use the Web-App for its core purpose, you will only require a device with internet connectivity, a web-browser and a copy of the file requiring conversion.
+                <br>
+                <br>
+                On the Web-App end, an essential service such as AWS (Amazon Web Services) will be required for their remote cloud computing abilities.
+                <br>
+                <br>
+                AWS scalable setup must be considered and will be dependent on the number of subscribers, data being processed/managed at any given time.
+                <br>
+                <br>
+                On the payment side, a service such as Stripe Billing will be required to provide me invoice-based payments (one off conversions and downloads) as well as subscription based billing for those wanting volume uploads, conversions and downloads.
+              </p>
+            </div>
+            <div class="column_right">
+              <br>
+            <figure>
+              <img src="media/images/contents/project_aws.png">
+              <figcaption style="color:white;">Amazon Web Services - Screenshot by Daniel Nanthathammiko</figcaption>
+            </figure>
+            </div>
+          </div>
+          <div class="title_center">
+            <h1>SKILLS REQUIRED</h1>
+          </div>
+          <div class="content_wrap4">
+            <div class="image_left">
+              <br>
+            <figure>
+              <img src="media/images/contents/project_terminal.png">
+              <figcaption style="color:white;">Terminal Screen - Screenshot by Daniel Nanthathammiko</figcaption>
+            </figure>
+            </div>
+            <div class="text_right">
+              <p class="body">
+                I would need to thoroughly understand languages such as Python for simple data conversion, Javascript as many open-source projects that will enable me to view and interact with the data such as Harp.gl and Potree Viewer will require that understanding MySQL for database design and management for customer information, account information as well as HTML, CSS, Javascript (as mentioned previously) for building the UI.
+                <br>
+                <br>
+                A deeper understanding of Terminal commands for linux and unix systems will be incredibly helpful in setting up and deploying and managing this Web-App as well.
+                Understanding how AWS and Stripe will work together will also be essential in ensuring a seamless experience with the Web-App.
+                <br>
+                <br>
+                Since AWS for remote cloud computing has been around for quite a while, there are many reference documents as well as general AWS customer support to ensure I can bring to life the backend.
+                Learning the required languages will be covered within my Undergrad at RMIT which is extremely beneficial.
+              </p>
+            </div>
+          </div>
+          <figure>
+            <img src="media/images/contents/project_opensource.png">
+            <figcaption style="color:white;">Harp.gl open source project - Screenshot by Daniel Nanthathammiko</figcaption>
+          </figure>
+          <div class="title_center">
+            <h1>OUTCOME</h1>
+          </div>
+          <p class="body">
+            Success for this project will be measured by customer usage of the Web-App service.
+            If we have repeat or subscribers of the product and it pays for itself, I will consider this a success.
+            <br>
+            <br>
+            Successful usage for a client would be receiving a useful deliverable from a format that they could not utilise in its original state.
+            With significant user uptake, it could disrupt traditional spatial data management services and applications by providing a low-cost alternative for those requiring simple deliverables on the day.
+            <br>
+            <br>
+            Would this take away from AutoCAD or other CAD software users? No.
+            But that is not our intention at all.
+            <br>
+            <br>
+            Mobile Parse the Parcel is here to bring simplicity to spatial data conversion without the weight and extensive knowledge of a full application or data specialist.
+          </p>
+
 <a id="6"></a>
-<div class="content2">
-<h2>REFERENCES</h2>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-</div>
+    <div class="content_light">
+      <br>
+      <br>
+      <h1>REFERENCES</h1>
+      <p class="body_light">
+        W3schools.com 2021, CSS Tutorial, viewed 14 August 2021, &lt;https://www.w3schools.com/css/default.asp&gt;
+        <br>
+        <br>
+        Stack Overflow 2021, Stack Overflow - Where Developers Learn, Share, & Build Careers, viewed 14 August 2021, &lt;https://stackoverflow.com/&gt;
+        <br>
+        <br>
+        GitHub 2021, GitHub: Where the world builds software, viewed 14 August 2021, &lt;https://github.com&gt;
+        <br>
+        <br>
+        SEEK 2021, [online] &lt;https://www.seek.com.au&gt;
+        <br>
+        <br>
+        16personalities.com 2021, Free personality test, type descriptions, relationship and career advice | 16Personalities, viewed 14 August 2021, &lt;https://www.16personalities.com/&gt;
+        <br>
+        <br>
+        Matrix, Q., 2021. Quiz: What's your learning style? | Matrix, viewed 14 August 2021, Matrix Education. &lt;https://www.matrix.edu.au/quiz-whats-your-learning-style/&gt;
+        <br>
+        <br>
+        Speedtypingonline.com 2021, Free Online Typing Test - SpeedTypingOnline, viewed 14 August 2021, &lt;https://www.speedtypingonline.com/typing-test&gt;
+        <br>
+        <br>
+        Amazon Web Services, Inc 2021, HPC FAQs - Amazon Web Services, viewed 14 August 2021, &lt;https://aws.amazon.com/hpc/faqs/&gt;
+        <br>
+        <br>
+        Stripe.com 2021, Online payment processing for internet businesses – Stripe, viewed 14 August 2021, &lt;https://stripe.com/au&gt;
+        <br>
+        <br>
+        GitHub 2021, GitHub - heremaps/harp.gl: 3D web map rendering engine written in TypeScript using three.js, viewed 14 August 2021, &lt;https://github.com/heremaps/harp.gl&gt;
+        <br>
+        <br>
+        GitHub 2021, GitHub - potree/potree: WebGL point cloud viewer for large datasets, viewed 14 August 2021, &lt;https://github.com/potree/potree&gt;
+      </p>
+    </div>
 <div class="footer">
-<a href="#0"><h5>BACK IT UP</h5></a>
+<a href="#1"><h5>BACK IT UP</h5></a>
 </div>
-
+</div>
 
 
 <script>
